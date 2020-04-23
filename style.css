@@ -1,96 +1,220 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin:0;
+    padding:0;
     box-sizing: border-box;
 }
 
-body{
-    display: flex;
- }
 
-@media only screen and (max-width: 858px) {
-    body{
-        flex-direction: column;
-    }
-  }
-
-.section{
-    height: 100vh;
-    width:50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding:20px;
-   
+.page-wrapper{
+    width:1075.20px; /*Wrapper width*/
+    margin-left:5%;  /*Nice space between content and device border*/
+    margin-right:5%;  /*Nice space between content and device border*/
 }
 
 
-@media only screen and (max-width: 858px) {
-    .section{
-        width: 100%;
+#main-header{
+    height:65px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#0b0c0c;
+    border-bottom: 10px solid #e5e500;
+
+}
+
+
+#logo{
+    width:150px;
+}
+
+#heading-container{
+    height:205px;
+    background-color:#0b0c0c;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#heading-container h1{
+    font-size:3em;
+    max-width: 537.60px;
+    font-family: 'Roboto', sans-serif;
+    transform: scale(1, 0.95);
+}
+
+@media only screen and (max-width: 636px) {
+    #heading-container h1 {
+      font-size:2em;
     }
   }
+
 
 #section-1{
-    background-color:#f2f2f2;
+
+    background-color:272828;
+    display: flex;
+    justify-content: center;
+    padding-top:50px;
+    padding-bottom: 50px;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size:1.2em;
+
 }
+
+
+
+#section-1-wrapper ul{
+    max-width: 537.60px; 
+    list-style-position:inside;
+
+}
+
+#section-1-content{
+    max-width: 670px;
+}
+
+#section-1 p{
+    margin-bottom: 12px;
+}
+
+@media only screen and (max-width: 636px) {
+    #section-1 p {
+     font-size: 0.9em;
+    }
+  }
+
+#section-1 p:nth-child(1){
+    font-weight: 700;
+}
+
+#section-1 li{
+    margin-bottom: 12px;
+    text-align: left;
+    font-size: 1em;
+    list-style-position: inside;
+
+}
+
+@media only screen and (max-width: 636px) {
+    #section-1 li {
+      font-size:0.8em;
+    }
+  }
 
 #section-2{
-    background-color:#d9d9d9;
-}
-
-
-.content{
-    max-width:100%;
-    width: 400px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top:50px;
+    padding-bottom: 50px;
+    font-family: 'Roboto', sans-serif;
 }
 
-.section h1{
-    font-size:3em;
-    font-family: 'Roboto';
-    margin-bottom: 12px;
+#section-2-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#section-2 h1{
+    font-size:2em;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 636px) {
+    #section-2 h1 {
+      font-size:1.8em;
+    }
+  }
+
+
+#section-2 h2{
+    font-size:1.5em;
+    margin-bottom: 20px;
 }
 
 
-.content p{
-    margin-bottom: 12px;
-    font-family: 'Roboto';
-}
-
-.result-p{
-    font-family: 'Roboto';
-    margin-bottom: 0;
-    position: absolute;
-    bottom:16%;
-
-}
+@media only screen and (max-width: 636px) {
+    #section-2 h2 {
+      font-size:1.3em;
+    }
+  }
 
 
-.section input{
-    width:100%;
-    margin-top:12px;
-    margin-bottom: 12px;
-    padding:12px;
-    font-family: Roboto;
-}
 
-.section button{
-    width:35%;
-    border:solid 2px #191919;
+#section-2 button{
+    background-color:#2A8EBA;
+    padding:20px 50px;
     color:white;
-    background-color:#191919;
-    padding:20px;
-    transition: ease-in-out 0.2s;
+    font-weight: 700;
+    align-self: flex-start;
+    flex-direction: column;
+    border:0;
+    -webkit-appearance: none;
+
+}
+
+.button-div button{
+    width:auto;
+    margin:2.5px;
+}
+
+#button-div button:nth-child(1){
+    margin-left: 0;
+}
+
+#go{
+    margin-top:10px;
+}
+
+
+#section-2 button:hover{
     cursor: pointer;
 }
 
-.section button:hover{
-    background-color:transparent;
-    border: solid 2px #191919;
-    color:#191919;
+.question-box{
+    width:100%;
+    display: none;
+    margin-top:50px;
+}
+
+#section-2 input{
+    width:100%;
+    max-width: 323px;
+    padding:12px;
+    height:56px; 
+    -webkit-appearance: none;
+    border: solid 1px #a9a9a9;
+    white-space:pre;
+}
+
+#message{
+    margin-top:50px;
+  font-size:1.5em;
+  font-weight: 700;
+  color:red;
+    display: none;
+}
+
+
+@media only screen and (max-width: 636px) {
+    #message {
+      font-size:1.3em;
+    }
+  }
+
+
+footer{
+    height:50px;
+    color:white;
+    background-color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
 }
