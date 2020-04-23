@@ -2,144 +2,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Code Collab</title>
+    
+    <title>Number Converter</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/cd801faa65.js" crossorigin="anonymous"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
+    <section class="section" id="section-1">
 
-    <header id="main-header">
-        <header class="page-wrapper">
-            <img src="images/logo.png" id="logo" alt="logo">
-        </header>
 
-    </header>
+        <div class="content">
+            <h1>String to Integer</h1>
+            <p>Convert your text to a number below </p>
+            <input type="text" id="string-input" placeholder="Enter text">
+            <button type="submit" id="string-button">Go!</button>
 
-    <header id="heading-container">
-
-        <div class="page-wrapper">
-            <h1>Coronavirus (COVID-19): what you need to do</h1>
         </div>
-    </header>
 
-    <section id="section-1">
-        <div class="page-wrapper">
-            <p>Stay at home</p>
-
-            <ul>
-                <li>Only go outside for food, health reasons or work (but only if you cannot work from home)</li>
-                <li>If you go out, stay 2 metres (6ft) away from other people at all times</li>
-                <li>Wash your hands as soon as you get home</li>
-            </ul>
-
-            <p>Do not meet others, even friends or family. You can spread the virus even if you don’t have symptoms.
-            </p>
-        </div>
-    </section>
+        <p id="string-p" class="result-p"></p> <!--PARAGRAPH FOR RESULT. I'VE ADDED AN ID TO USE IN JAVASCRIPT-->
 
 
-
-    <section id="section-2">
-        <div id="section-2-wrap" class="page-wrapper">
-
-            <h1>Essential worker test</h1>
-
-            <h2 id="test">Are you currently inside?</h2>
-
-            <div id="button-div">
-                <button id="yes-button">YES</button>
-                <button id="no-button">NO</button>
-            </div>
-
-            <div id="question-box">
-                <h2>What is your job role? E.g, if a teacher, type 'Teacher'.</h2>
-
-
-                <div>
-                    <input id="input" type="text" required></input>
-                    <button type="submit" id="go">GO</button>
-                </div>
-
-            </div>
-
-            <p id="message"></p>
 
     </section>
 
+    <section class="section" id="section-2">
 
-    <script>
-
-        let yesButton = document.getElementById("yes-button");
-        let noButton = document.getElementById("no-button");
-        let questionBox = document.getElementById("question-box");
-        let goButton = document.getElementById("go");
-        let message = document.getElementById("message");
-
-        const keyJobs = ["doctor", "teacher", "nurse", "care worker", "cashier", "bus driver", "cleaner"];
-
-
-
-        yesButton.onclick = () => {
-            message.style.display = "block";
-            message.innerHTML = "Thank you for helping our key-workers during this difficult period. Please stay safe.";
-            questionBox.style.display = "none";
-        }
-
-        noButton.onclick = () => {
-
-            questionBox.style.display = "block";
-            message.style.display = "none";
-
-        };
-
-
-
-        goButton.onclick = () => {
-
-            let input = document.getElementById("input").value;
-            input = input.toLowerCase();
-
-            window.scrollTo(0, document.body.scrollHeight);
-
-
-            if (keyJobs.includes(input)) {
-
-                message.style.display = "block";
-                message.innerHTML = "Thank you for all your hard work in a bid to keep the UK safe and running smoothly. Please stay safe.";
-
-            }
-
-            else if (input.length == 0) {
-
-                message.style.display = "block";
-                message.innerHTML = "Please enter your job role.";
-            }
-
-            else {
-                message.style.display = "block";
-                message.innerHTML = "In a bid to suppress the spread of COV-ID 19, we ask that all non-key workers please stay home. Stay Home, Protect the NHS, Save Lives.";
-            }
-
-        }
-
-
-    </script>
-
-
-    <footer>
-        <div class="page-wrapper">
-            <p>Website developed by Emmanuel.</p>
+        <div class="content">
+            <h1>Integer to String</h1>
+            <p>Convert your number to text below</p>
+            <p id="number-p" class="result-p"></p>
+            <input type="number" id="number-input" placeholder="Enter number">
+            <button type="submit" id="number-button">Go!</button>
         </div>
-    </footer>
 
+        <p id="string-p" class="result-p"></p> <!--PARAGRAPH FOR RESULT. I'VE ADDED AN ID TO USE IN JAVASCRIPT-->
 
-
-
-
+    </section>
 </body>
