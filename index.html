@@ -61,20 +61,21 @@
             </div>
 
             <div class="question-box" id="question-box-1">
-                <h2>Are you currently outside for a non-essential reason? Essential reasons include work, essential shopping,
+                <h2>Are you currently outside for a non-essential reason? Essential reasons include work, essential
+                    shopping,
                     medication or daily excercise.</h2>
-                    <div class="button-div">
-                        <button id="second-yes-button">YES</button>
-                        <button id="second-no-button">NO</button>
-                    </div>
+                <div class="button-div">
+                    <button id="second-yes-button">YES</button>
+                    <button id="second-no-button">NO</button>
+                </div>
             </div>
 
             <div class="question-box" id="reason-box">
-            <h2>Please choose a reason</h2>
-            <div class="button-div">
-                <button id="work">WORK</button>
-                <button id="other">OTHER</button>
-            </div>
+                <h2>Please choose a reason</h2>
+                <div class="button-div">
+                    <button id="work">WORK</button>
+                    <button id="other">OTHER</button>
+                </div>
             </div>
 
             <div class="question-box" id="question-box-2">
@@ -86,9 +87,12 @@
 
             </div>
 
-
-
             <p id="message"></p>
+
+            <a id="link"
+                href="https://www.nhs.uk/conditions/coronavirus-covid-19/staying-at-home-to-avoid-getting-coronavirus/staying-at-home-and-away-from-other-people/">Read
+                NHS advice</a>
+
 
     </section>
 
@@ -98,11 +102,11 @@
         let firstYesButton = document.getElementById("first-yes-button");
         let firstNoButton = document.getElementById("first-no-button");
         let firstQuestionBox = document.getElementById("question-box-1");
-        
+
         let secondYesButton = document.getElementById("second-yes-button");
         let secondNoButton = document.getElementById("second-no-button");
         let secondQuestionBox = document.getElementById("question-box-2");
-        
+
         let reasonBox = document.getElementById("reason-box");
 
         let workButton = document.getElementById("work");
@@ -111,8 +115,10 @@
         let goButton = document.getElementById("go");
         let message = document.getElementById("message");
 
+        let link = document.getElementById("");
+
         const keyJobs = ["doctor", "teacher", "nurse", "care worker", "cashier", "bus driver", "cleaner",
-    "delivery", "carer", "police officer", "police", "healthcare worker", "health-care worker"];
+            "delivery", "carer", "police officer", "police", "healthcare worker", "health-care worker"];
 
 
         /*First yes or no question*/
@@ -143,6 +149,7 @@
             message.innerHTML = "In a bid to suppress the spread of COV-ID 19, we ask that all non-key workers please stay home. Stay Home, Protect the NHS, Save Lives.";
             secondQuestionBox.style.display = "none";
             reasonBox.style.display = "none";
+
         }
 
         secondNoButton.onclick = () => {
@@ -198,6 +205,7 @@
             else {
                 message.style.display = "block";
                 message.innerHTML = "In a bid to suppress the spread of COV-ID 19, we ask that all non-key workers please stay home. Stay Home, Protect the NHS, Save Lives.";
+
             }
 
         }
